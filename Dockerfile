@@ -1,12 +1,15 @@
-# wadoon/msml_tutorial_base
+# wadoon/msml_tutorial
 #
 
 
-FROM wadoon/msml_tutorial:2015.04.20
+FROM wadoon/msml_tutorial:2015.04.21
 
 MAINTAINER Alexander Weigl <Alexander.Weigl@student.kit.edu>
 
-WORKDIR /root
+WORKDIR /home/msml
+USER msml
+
+CMD /usr/sbin/sshd -D
 
 
 # TODO add tutorial files
